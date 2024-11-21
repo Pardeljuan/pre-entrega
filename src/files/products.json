@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"title": "top",
+		"status": true,
+		"stock": 5,
+		"thumbnail": null
+	},
+	{
+		"id": 3,
+		"title": "remera",
+		"status": true,
+		"stock": 6,
+		"thumbnail": null
+	},
+	{
+		"id": 4,
+		"title": "musculosa",
+		"status": true,
+		"stock": 7,
+		"thumbnail": null
+	}
+]

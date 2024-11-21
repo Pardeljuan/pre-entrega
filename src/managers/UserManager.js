@@ -37,13 +37,13 @@ export default class UserManager {
     }
     async insertOne(data) {
         try {
-            const producs = data?.producs?.map(((item) => {
-                return { produc: Number(item.produc), quantity: 1}
+            const products = data?.products?.map(((item) => {
+                return { product: Number(item.product), quantity: 1}
             }));
 
             const user = {
                 id: generateId( await this.getAll()),
-                producs: producs || [],
+                products: products || [],
             };
             this.#users.push(user);
             await writeJsonFile(paths.files, this.#jsonFilename, this.#users )
@@ -54,15 +54,15 @@ export default class UserManager {
     }
 
     // Agrega un usuario
-    addOneIngredient = async (id, producId) => {
+    addOneIngredient = async (id, productId) => {
         try {
             const userFound = await this.#findOneById(id);
-            const producIndex = userFound.producs.findIndex((item) => item.produc === Number(producId));
+            const productIndex = userFound.products.findIndex((item) => item.product === Number(productId));
 
-            if (producIndex >= 0) {
-                userFound.producs[producIndex].quantity++;
+            if (productIndex >= 0) {
+                userFound.products[productIndex].quantity++;
             } else {
-                userFound.producs.push({ produc: Number(producId), quantity: 1 });
+                userFound.products.push({ product: Number(productId), quantity: 1 });
             }
 
             const index = this.#users.findIndex((item) => item.id === Number(id));

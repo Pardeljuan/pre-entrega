@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
 });
 
 // Ruta para incrementar en una unidad o agregar 
-router.post("/:cid/ingredients/:pid", async (req, res) => {
+router.post("/:cid/products/:pid", async (req, res) => {
     try {
         const { cid, pid } = req.params;
         const { quantity } = req.body;
