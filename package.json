@@ -1,0 +1,33 @@
+{
+  "name": "entrega final",
+  "version": "1.0.0",
+  "description": "entrega final",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --no-warnings ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "express",
+    "backend"
+  ],
+  "author": "Pardel Juan",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "moment": "^2.30.1",
+    "mongoose": "^8.8.3",
+    "mongoose-paginate-v2": "^1.8.5",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "nodemon": "^3.1.7"
+  }
+}
